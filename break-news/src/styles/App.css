@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Readex+Pro:wght@400,500,600,700;400&display=swap");
+
+body,
+html {
+  font-family: "Readex Pro", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+#main {
+  height: 100vh;
+}
+
+.header-content {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+  /* background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1553095066-5014bc7b7f2d%3Fixlib%3Drb-4.0.3%26ixid%3DMnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8%26w%3D1000%26q%3D80&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fwall-background&tbnid=Xj9Yp8500BYZ-M&vet=12ahUKEwjL7qLnlZX7AhXHpYsKHbe5AP8QMygEegUIARDnAQ..i&docid=i5oUTEWCwPkbrM&w=1000&h=666&q=background%20images&ved=2ahUKEwjL7qLnlZX7AhXHpYsKHbe5AP8QMygEegUIARDnAQ"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navlink {
+  color: white;
+}
+.navlink:hover {
+  color: #8aff97;
+}
+.navlink.isActive {
+  color: #8aff97;
+}
+
+.feed-card {
+  cursor: pointer;
+  min-height: 325px;
+  transition: all 0.5s;
+}
+
+.feed-card:hover {
+  transform: scale(1.02);
+}
+
+.brand-name {
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.brand-name:hover {
+  color: white;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.stock-details {
+  position: relative;
+  color: white !important;
+  border-radius: 12px;
+  background-color: rgba(18, 33, 39, 09);
+  padding: 30px;
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stock-details::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #034426b8;
+  transition: 2s;
+  position: absolute;
+}
+
+.stock-details:hover::after {
+  width: 200px;
+  height: 120px;
+  top: calc(100% - 100px);
+}
+
+/* responsive layouts */
+@media (max-width: 767.98px) {
+  .header-content {
+    padding: 0 0 30px 0;
+  }
+  .feed-card {
+    min-height: 225px;
+  }
+  .stock-details {
+    padding: 15px;
+  }
+}
